@@ -30,7 +30,7 @@
 * Now typing 
 
 ```javascript
-   npm start
+   meteor
 ```
 
 .then Browser will be up and running :) 
