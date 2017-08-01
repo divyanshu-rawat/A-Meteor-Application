@@ -1,0 +1,74 @@
+<head>
+  <title>image_share</title>
+</head>
+
+<body>
+		{{> image_add_form}}
+
+		<div class="container">
+		  <h2>Image Gallery</h2>
+			  <div class="container">
+			 	 {{> images}}
+			  </div>
+		</div>
+</body>
+
+<template name="image_add_form">
+
+<div class="modal fade" id="image_add_form">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title">
+        </div>
+      </div>
+      <div class="modal-body col-lg-12" >       
+        <form class="js-add-image col-lg-6" >
+          <div class="form-group">
+			  <label for="usr">Image Source:</label>
+			  <input type="text" class="form-control" name="img_src">
+			</div>
+			<div class="form-group">
+			  <label for="pwd">Image Alt</label>
+			  <input type="password" class="form-control" name="img_alt">
+		 </div>
+
+		  <button class="btn btn-success">Save</button>
+
+        </form> 
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-warning" data-dismiss="modal">cancel</button>
+      </div>  
+      </div>
+    </div>
+
+</div>
+
+  </template>
+
+<template name="images">
+  <button class="btn btn-success js-show-image-form">Add Image</button>
+  <br>
+  <br>
+	<div class="row">
+		  {{#each images}}
+		  <div class="col-xs-12 col-md-3" id="{{_id}}">
+		  	<div class="thumbnail">
+
+		  	 	<img class="js-image img-size" src="{{img_src}}" 
+		  		alt="{{img_alt}}" /> 
+		  			
+		  		<div class="caption">
+		        	<h4>Rating: {{rating}}</h4>
+		          <p>
+		            {{>starsRating mutable=true class="js-rate-image" id=_id}}
+		          </p>
+
+		           <button class="js-del-image btn btn-primary">Delete</button>
+		     	</div>
+		     </div>
+		    </div> <!-- / col -->
+		  {{/each}}
+</div> <!-- / row -->
+  </template>
