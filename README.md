@@ -5,14 +5,11 @@
 
 [![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/r46956)
 [![DUB](https://img.shields.io/dub/l/vibe-d.svg?style=flat)](https://divyanshu.mit-license.org/)
-
-
 [![Divyanshu](https://img.shields.io/badge/divyanshu-owner-brightgreen.svg?style=flat)](http://www.divyanshurawat.in)
 [![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/divyanshu-rawat)
-
 [![Build Status](https://travis-ci.org/divyanshu-rawat/JS-Testing.svg?branch=master)](https://travis-ci.org/divyanshu-rawat/JS-Testing)
 [![NPM](https://img.shields.io/badge/npm-v3.10.10-blue.svg)](https://www.npmjs.com/package/npm)
-[![Live Demo Here](https://img.shields.io/badge/website-up-orange.svg)](https://ajspuzzle.herokuapp.com/)
+
 
 ##
 
