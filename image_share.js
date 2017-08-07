@@ -22,7 +22,7 @@ if (Meteor.isClient) {
           return user.username;
         }
         else {
-          return "anon";
+          return "Anonymous";
         }
       },
 

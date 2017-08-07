@@ -1,11 +1,11 @@
 /* CSS declarations go here */
 .thumbnail {
-	height:500px;
+	height:400px;
 	word-wrap:break-word;
 }
 
 .thumbnail-img{
-	max-height:200px;
+	height:120px !important;
 }
 
 .login-link-text{
