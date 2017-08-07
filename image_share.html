@@ -5,8 +5,14 @@
 <body>
 		{{> image_add_form}}
 
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+		  <div class="container">
+		   	<div class="navbar-btn">{{> loginButtons}}</div>
+		  </div>
+		</nav>
+
 		<div class="container">
-		  <h2>Image Gallery</h2>
+		   <h1>Welcome to Image Share {{username}}!</h1>
 			  <div class="container">
 			 	 {{> images}}
 			  </div>
@@ -29,8 +35,8 @@
 			  <input type="text" class="form-control" name="img_src">
 			</div>
 			<div class="form-group">
-			  <label for="pwd">Image Alt</label>
-			  <input type="password" class="form-control" name="img_alt">
+			  <label for="alt">Image Alt</label>
+			  <input type="text" class="form-control" name="img_alt">
 		 </div>
 
 		  <button class="btn btn-success">Save</button>
@@ -48,21 +54,35 @@
   </template>
 
 <template name="images">
+
+{{#if currentUser}}
   <button class="btn btn-success js-show-image-form">Add Image</button>
+{{/if}}
+
   <br>
   <br>
+
+{{#if checkFilter}}
+	Showing images by user {{getFilterUser}}. <a href="#" class="js-unset-image-filter">Remove Filter</a>
+{{/if}}
+
 	<div class="row">
 		  {{#each images}}
 		  <div class="col-xs-12 col-md-3" id="{{_id}}">
 		  	<div class="thumbnail">
 
-		  	 	<img class="js-image img-size" src="{{img_src}}" 
+		  	 	<img class="js-image thumbnail-img" src="{{img_src}}" 
 		  		alt="{{img_alt}}" /> 
+
+		  		  <p>
+		            User:
+		            <a href="#" class="js-set-image-filter">{{getUser createdBy}}</a>
+		          </p>
 		  			
 		  		<div class="caption">
 		        	<h4>Rating: {{rating}}</h4>
 		          <p>
-		            {{>starsRating mutable=true class="js-rate-image" id=_id}}
+		             {{>starsRating mutable=true class="js-rate-image" data_id=_id rating=rating}}
 		          </p>
 
 		           <button class="js-del-image btn btn-primary">Delete</button>

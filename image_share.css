@@ -1,10 +1,17 @@
 /* CSS declarations go here */
 .thumbnail {
-    min-height:500px;
-    max-height:500px;
+	height:500px;
+	word-wrap:break-word;
 }
 
-.img-size{
-	height: 250px !important;
-	width: 300px !important;
+.thumbnail-img{
+	max-height:200px;
+}
+
+.login-link-text{
+	text-decoration: none !important;
+}
+
+body{
+	padding-top:60px;
 }
