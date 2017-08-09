@@ -14,6 +14,13 @@
 </template>
 
 
+
+<!-- <template name="image">
+		  <div class="container">
+			  <a href="/images"><img class="single-img" src="{{img_src}}"/></a>
+		  </div>
+ </template> -->
+
 <template name = "Welcome">
 		<div class="container">
 			<div class="jumbotron">
@@ -85,8 +92,11 @@
 		  <div class="col-xs-12 col-md-3" id="{{_id}}">
 		  	<div class="thumbnail">
 
-		  	 	<img class="js-image thumbnail-img" src="{{img_src}}" 
-		  		alt="{{img_alt}}" /> 
+		  	 	<!-- <a href="/image/{{_id}}"><img class="js-image thumbnail-img" src="{{img_src}}" 
+		  		alt="{{img_alt}}" /></a> -->
+
+		  		<img class="js-image thumbnail-img" src="{{img_src}}" 
+		  		alt="{{img_alt}}" />
 
 		  		<br>
 		  		<br>

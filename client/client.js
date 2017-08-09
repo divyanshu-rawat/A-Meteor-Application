@@ -20,6 +20,22 @@
     });
   });
 
+//   Router.route('/image/:_id', function () {
+//   this.render('navigation-bar', {
+//     to:"navbar"
+//   });
+//   this.render('image', {
+//     to:"Layout",
+//     data:function(){
+
+//     console.log(Images.findOne({"_id":this.params._id}));
+//     console.log('I am in !!!')
+//     return Images.findOne({"_id":this.params._id});
+//   }
+//   });
+// });
+
+
     Session.set("imageLimit", 8);
 
       lastScrollTop = 0; 

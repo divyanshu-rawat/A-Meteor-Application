@@ -12,6 +12,11 @@
 	text-decoration: none !important;
 }
 
+
+.single-img{
+	max-width:100%;
+}
+
 body{
 	padding-top:60px;
 }
