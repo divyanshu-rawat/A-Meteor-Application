@@ -3,57 +3,71 @@
 </head>
 
 <body>
-		{{> image_add_form}}
 
+</body>
+
+<template name = "FormattingApplication">
+	
+  {{> yield "navbar"}}
+  {{> yield "Layout"}}
+
+</template>
+
+
+<template name = "Welcome">
+		<div class="container">
+			<div class="jumbotron">
+			   <h3>Welcome to Image Share {{username}}</h3>
+			   <a href="/images" class="btn btn-info">ENTER</a>
+			</div>
+		</div>
+</template>
+
+	<template name = "navigation-bar">
 		<nav class="navbar navbar-inverse navbar-fixed-top">
 		  <div class="container">
 		   	<div class="navbar-btn">{{> loginButtons}}</div>
 		  </div>
 		</nav>
-
-		<div class="container">
-		   <h3>Welcome to Image Share {{username}}</h3>
-			  <div class="container">
-			 	 {{> images}}
-			  </div>
-		</div>
-</body>
+	</template>
 
 <template name="image_add_form">
 
-<div class="modal fade" id="image_add_form">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <div class="modal-title">
-        </div>
-      </div>
-      <div class="modal-body col-lg-12" >       
-        <form class="js-add-image col-lg-6" >
-          <div class="form-group">
-			  <label for="usr">Image Source:</label>
-			  <input type="text" class="form-control" name="img_src">
-			</div>
-			<div class="form-group">
-			  <label for="alt">Image Alt</label>
-			  <input type="text" class="form-control" name="img_alt">
-		 </div>
+	<div class="modal fade" id="image_add_form">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <div class="modal-title">
+	        </div>
+	      </div>
+	      <div class="modal-body col-lg-12" >       
+	        <form class="js-add-image col-lg-6" >
+	          <div class="form-group">
+				  <label for="usr">Image Source:</label>
+				  <input type="text" class="form-control" name="img_src">
+				</div>
+				<div class="form-group">
+				  <label for="alt">Image Alt</label>
+				  <input type="text" class="form-control" name="img_alt">
+			 </div>
 
-		  <button class="btn btn-success">Save</button>
+			  <button class="btn btn-success">Save</button>
 
-        </form> 
-      </div>
-      <div class="modal-footer">
-        <button class="btn btn-warning" data-dismiss="modal">cancel</button>
-      </div>  
-      </div>
-    </div>
+	        </form> 
+	      </div>
+	      <div class="modal-footer">
+	        <button class="btn btn-warning" data-dismiss="modal">cancel</button>
+	      </div>  
+	      </div>
+	    </div>
 
-</div>
+	</div>
 
   </template>
 
 <template name="images">
+
+  <div class="container js-container" >
 
 {{#if currentUser}}
   <button class="btn btn-success js-show-image-form">Add Image</button>
@@ -94,4 +108,5 @@
 		    </div> <!-- / col -->
 		  {{/each}}
 </div> <!-- / row -->
+</div>
   </template>

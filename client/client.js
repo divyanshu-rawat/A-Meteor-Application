@@ -1,5 +1,25 @@
 
 
+  Router.configure({
+    layoutTemplate: 'FormattingApplication'
+  });
+
+
+    Router.route('/', function () {
+    this.render('Welcome', {
+      to:"Layout"
+    });
+  });
+
+  Router.route('/images', function () {
+    this.render('navigation-bar', {
+      to:"navbar"
+    });
+    this.render('images', {
+      to:"Layout"
+    });
+  });
+
     Session.set("imageLimit", 8);
 
       lastScrollTop = 0; 
