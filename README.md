@@ -55,5 +55,5 @@ https://guide.meteor.com/using-npm-packages.html
 
 ##
 
-
+![alt tag](https://github.com/divyanshu-rawat/A-Meteor-Application/blob/master/Snapshots/img.png)
 
