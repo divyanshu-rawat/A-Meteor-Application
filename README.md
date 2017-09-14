@@ -13,6 +13,8 @@
 
 ##
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/divyanshu-rawat/A-Meteor-Application.svg)](https://greenkeeper.io/)
+
 ### Installation Instructions
 
 * Open a command prompt in the project's root directory.
